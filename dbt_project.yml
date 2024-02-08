@@ -21,6 +21,16 @@ require-dbt-version: [">=1.0.0", "<2.0.0"]
 
 models:
   elementary_tutorial:
-    materialized: table
+    +materialized: table
     staging:
-      materialized: view
+      +materialized: view
+  elementary:
+    +schema: elementary
+
+#      +schema: fin_schema
+#    finance:
+#      +database: ELEMENTARY_DB
+#      +schema: fin_schema
+#    marketing:
+#      +database: ELEMENTARY_DB
+#      +schema: mar_schema
