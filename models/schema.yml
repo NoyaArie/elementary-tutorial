@@ -60,6 +60,23 @@ models:
       - name: number_of_orders
         description: Count of the number of orders a customer has placed
 
+        tests:
+          - elementary.column_anomalies:
+              sensitivity: 3
+              backfill_days: 2
+              where_expression: 1=1
+              timestamp_column: signup_date
+              anomaly_tests:
+                - null_count
+                - average
+              config:
+                tags:
+                  - config_levels
+                severity: error
+              meta:
+                owner:
+                  - idan+222@elementary-data.com
+                description: blabla description bla
       - name: customer_lifetime_value
         description: Total value (AUD) of a customer's orders
 
