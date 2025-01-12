@@ -14,6 +14,14 @@ models:
       - name: order_id
       - name: status
 
+      - name: customer_id
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_increasing:
+              sort_column: date_day
+              row_condition: id is not null # Optional
+              strictly: true # Optional, Default is 'true', and it uses '>'. If set to 'false' it uses '>='.
+              group_by: # Optional
+                - group_id
   - name: stg_payments
     config:
       tags: ["staging", "finance"]

@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -11,6 +10,12 @@ models:
           - unique
           - not_null
 
+          - dbt_expectations.expect_column_values_to_be_increasing:
+              sort_column: date_day
+              row_condition: id is not null # Optional
+              strictly: true # Optional, Default is 'true', and it uses '>'. If set to 'false' it uses '>='.
+              group_by: # Optional
+                - group_id
   - name: my_second_dbt_model
     description: "A starter dbt model"
     columns:
@@ -19,3 +24,9 @@ models:
         tests:
           - unique
           - not_null
+          - dbt_expectations.expect_column_values_to_be_increasing:
+              sort_column: date_day
+              row_condition: id is not null # Optional
+              strictly: true # Optional, Default is 'true', and it uses '>'. If set to 'false' it uses '>='.
+              group_by: # Optional
+                - group_id
