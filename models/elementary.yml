@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: groups
+    columns:
+      - name: group_b
+        tests:
+          - unique:
+              config:
+                error_if: '!=0'
+              meta:
+                description: The group_b column in the groups table should contain
+                  only unique values
