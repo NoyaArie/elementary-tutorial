@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: config_levels_test_and_model
+    columns:
+      - name: null_count_bool
+        tests:
+          - dbt_utils.not_constant:
+              group_by_columns: # Optional, Columns to group by before executing the test
+                - group_id
+              config:
+                tags:
+                  - test
+                error_if: '>5'
+                warn_if: '>1'
+              meta:
+                owner:
+                  - noy+1@elementary-data.com
+                description: descriptionnnnn
