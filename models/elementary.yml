@@ -1,0 +1,44 @@
+version: 2
+models:
+  - name: ephemeral_model
+    tests:
+      - elementary.all_columns_anomalies:
+          column_anomalies: # Optional, A list of column monitors for anomaly detection.
+            - null_count
+            - null_percent
+            - min_length
+            - max_length
+            - average_length
+            - missing_count
+            - missing_percent
+            - min
+            - max
+            - average
+            - zero_count
+            - zero_percent
+            - standard_deviation
+            - variance
+            - sum
+          exclude_prefix: id_ # Optional, Columns with this prefix will be excluded from the test.
+          exclude_regexp: .*SDC$ # Optional, Columns matching this regular expression will be excluded from the test.
+          anomaly_sensitivity: 3 # Optional, The sensitivity level for anomaly detection.
+          anomaly_direction: both # Optional, The direction of anomalies to detect.
+          detection_period: # Optional, The period for anomaly detection.
+            period: day
+            count: 2
+          training_period: # Optional, The period for model training.
+            period: day
+            count: 14
+          seasonality: day_of_week # Optional, The seasonality of the data (omit for no seasonality).
+          detection_delay: # Optional, The period for detection delay.
+            period: day
+            count: 0
+          ignore_small_changes: # Optional
+            spike_failure_percent_threshold: 0 # Optional, Threshold for spike anomaly failure.
+            drop_failure_percent_threshold: 0 # Optional, Threshold for drop anomaly failure.
+          anomaly_exclude_metrics: metric_date != '2021-01-01' # Optional, SQL where expression on fields metric_date / metric_time_bucket / metric_value
+          time_bucket: # Optional, The period for time bucketing.
+            period: day
+            count: 1
+          timestamp_column: created_at # Optional, The timestamp column to use in order to split the data into time buckets.
+          where_expression: id is not null # Optional, SQL expression to filter the data.
