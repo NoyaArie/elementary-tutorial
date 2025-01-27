@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: groups
+    columns:
+      - name: group_b
+        tests:
+          - not_null:
+              config:
+                warn_if: '>=2'
+              meta:
+                description: The group_b column in the groups table should not contain
+                  null values
