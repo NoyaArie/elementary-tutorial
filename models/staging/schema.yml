@@ -21,6 +21,19 @@ models:
       - name: payment_id
       - name: payment_method
 
+    data_tests:
+      - dbt_utils.fewer_rows_than:
+          compare_model: ref('other_table_name')
+          group_by_columns: # Optional, Columns to group by before executing the test
+            - group_id
+          config:
+            tags:
+              - elementary-tests
+          meta:
+            owner:
+              - idan+222@elementary-data.com
+              - joost@elementary-data.com
+            description: dbt version 1.7
   - name: stg_signups
     config:
       tags: ["staging", "PII"]
