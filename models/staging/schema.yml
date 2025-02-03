@@ -21,6 +21,13 @@ models:
       - name: payment_id
       - name: payment_method
 
+    data_tests:
+      - dbt_utils.unique_combination_of_columns:
+          combination_of_columns:
+            - column1
+            - column2
+          config:
+            severity: error
   - name: stg_signups
     config:
       tags: ["staging", "PII"]
