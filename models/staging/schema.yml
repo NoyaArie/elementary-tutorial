@@ -21,6 +21,16 @@ models:
       - name: payment_id
       - name: payment_method
 
+      - name: order_id
+        data_tests:
+          - dbt_utils.at_least_one:
+              group_by_columns: # Optional, Columns to group by before executing the test
+                - group_id
+              config:
+                severity: error
+              meta:
+                owner:
+                  - ella+123@elementary-data.com
   - name: stg_signups
     config:
       tags: ["staging", "PII"]
