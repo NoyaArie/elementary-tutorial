@@ -19,6 +19,10 @@ models:
       tags: ["staging", "finance"]
     columns:
       - name: payment_id
+        data_tests:
+          - not_null:
+              description: The payment_id column in the stg_payments table should
+                not contain null values
       - name: payment_method
 
   - name: stg_signups
