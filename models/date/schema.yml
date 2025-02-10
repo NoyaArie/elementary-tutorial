@@ -2,4 +2,9 @@ version: 2
 
 models:
   - name: fin_date
+    data_tests:
+      - dbt_utils.equal_rowcount:
+          compare_model: ref('other_table_name')
+          group_by_columns: # Optional, Columns to group by before executing the test
+            - group_id
   - name: two_dates
