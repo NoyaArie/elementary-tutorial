@@ -27,3 +27,10 @@ models:
     columns:
       - name: signup_id
       - name: customer_email
+    data_tests:
+      - dbt_utils.equal_rowcount:
+          compare_model: ref('other_table_name')
+          group_by_columns: # Optional, Columns to group by before executing the test
+            - group_id
+          config:
+            warn_if: '!=0'
