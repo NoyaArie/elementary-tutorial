@@ -1,0 +1,9 @@
+version: 2
+models:
+  - name: groups
+    tests:
+      - dbt_utils.expression_is_true:
+          expression: "col_a + col_b >= total"
+          meta:
+            owner:
+              - '@elon'
