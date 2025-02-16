@@ -37,7 +37,8 @@ sources:
 
 models:
   - name: customers
-    description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
+    description: This table has basic information about a customer, as well as some
+      derived facts based on a customer's orders
     config:
       tags: ["PII"]
 
@@ -70,7 +71,8 @@ models:
         description: Date (UTC) of a customer's signup to the online shop.
 
   - name: orders
-    description: This table has basic information about orders, as well as some derived facts based on payments
+    description: This table has basic information about orders, as well as some derived
+      facts based on payments
     config:
       tags: ["finance"]
 
@@ -114,6 +116,17 @@ models:
             severity: error
           meta:
             description: Checks for schema changes against an existing baseline
+      - dbt_utils.equal_rowcount:
+          compare_model: ref('other_table_name')
+          group_by_columns: # Optional, Columns to group by before executing the test
+            - group_id
+          description: desc new text
+          config:
+            tags:
+              - '#tagged'
+          meta:
+            owner:
+              - noy@elementary-data.com
   - name: returned_orders
     description: This table contains all of the returned orders
     config:
