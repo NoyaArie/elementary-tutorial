@@ -1,43 +1,8 @@
 version: 2
-
-sources:
-  - name: date
-    # database: elementary_db
-    # schema: fin_schema
-    tables:
-      - name: date
-      - name: user_data
-        loaded_at_field: created_at
-        freshness:
-          warn_after:
-            count: 30
-            period: day
-        columns:
-          - name: full_name
-            tests:
-              - not_null
-  - name: date_dev
-    # database: dev
-    # schema: noya_tests_elementary
-    tables:
-      - name: date
-
-
-#sources:
-#  - name: date
-#    database: elementary_db
-#    schema: fin_schema
-#    tables:
-#      - name: USER_DATA
-#  - name: date_dev
-#    database: ELEMENTARY_TESTS
-#    schema: noya_tests_elementary
-#    tables:
-#      - name: USER_DATA
-
 models:
   - name: customers
-    description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
+    description: This table has basic information about a customer, as well as some
+      derived facts based on a customer's orders
     config:
       tags: ["PII"]
 
@@ -70,7 +35,8 @@ models:
         description: Date (UTC) of a customer's signup to the online shop.
 
   - name: orders
-    description: This table has basic information about orders, as well as some derived facts based on payments
+    description: This table has basic information about orders, as well as some derived
+      facts based on payments
     config:
       tags: ["finance"]
 
@@ -139,6 +105,15 @@ models:
               column_anomalies:
                 - sum
               tags: ["numeric_column_anomalies"]
+              config:
+                tags:
+                  - numeric_column_anomalies
+                severity: warn
+                warn_if: null
+                error_if: null
+              meta:
+                owners: null
+              description: null
           - elementary.column_anomalies:
               column_anomalies:
                 - max
@@ -159,3 +134,34 @@ models:
 
       - name: gift_card_amount
         description: Amount of the order (AUD) paid for by gift card
+sources:
+  - name: date
+    tables:
+      - name: date
+      - name: user_data
+        loaded_at_field: created_at
+        freshness:
+          warn_after:
+            count: 30
+            period: day
+        columns:
+          - name: full_name
+            tests:
+              - not_null
+  - name: date_dev
+    tables:
+      - name: date
+
+
+#sources:
+#  - name: date
+#    database: elementary_db
+#    schema: fin_schema
+#    tables:
+#      - name: USER_DATA
+#  - name: date_dev
+#    database: ELEMENTARY_TESTS
+#    schema: noya_tests_elementary
+#    tables:
+#      - name: USER_DATA
+
