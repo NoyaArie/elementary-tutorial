@@ -37,7 +37,8 @@ sources:
 
 models:
   - name: customers
-    description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
+    description: This table has basic information about a customer, as well as some
+      derived facts based on a customer's orders
     config:
       tags: ["PII"]
 
@@ -70,7 +71,8 @@ models:
         description: Date (UTC) of a customer's signup to the online shop.
 
   - name: orders
-    description: This table has basic information about orders, as well as some derived facts based on payments
+    description: This table has basic information about orders, as well as some derived
+      facts based on payments
     config:
       tags: ["finance"]
 
@@ -139,6 +141,15 @@ models:
               column_anomalies:
                 - sum
               tags: ["numeric_column_anomalies"]
+              config:
+                tags:
+                  - numeric_column_anomalies2
+                severity: warn
+                warn_if: null
+                error_if: null
+              meta:
+                owners: null
+              description: null
           - elementary.column_anomalies:
               column_anomalies:
                 - max
