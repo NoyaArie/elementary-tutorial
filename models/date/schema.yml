@@ -3,3 +3,15 @@ version: 2
 models:
   - name: fin_date
   - name: two_dates
+    data_tests:
+      - dbt_utils.equal_rowcount:
+          compare_model: ref('other_table_name')
+          group_by_columns: # Optional, Columns to group by before executing the test
+            - group_id
+          description: desc new text
+          config:
+            tags:
+              - '#tagged'
+          meta:
+            owner:
+              - noy@elementary-data.com
