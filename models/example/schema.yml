@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -11,6 +10,15 @@ models:
           - unique
           - not_null
 
+    data_tests:
+      - dbt_utils.equal_rowcount:
+          compare_model: ref('other_table_name')
+          group_by_columns: # Optional, Columns to group by before executing the test
+            - group_id
+          description: cond - error >5 + warn >3
+          config:
+            error_if: '>5'
+            warn_if: '>3'
   - name: my_second_dbt_model
     description: "A starter dbt model"
     columns:
