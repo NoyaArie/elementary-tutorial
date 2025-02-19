@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: backfill_days_column_anomalies
+    columns:
+      - name: updated_at
+        tests:
+          - dbt_utils.not_empty_string:
+              trim_whitespace: true # Optional
+              config:
+                severity: error
