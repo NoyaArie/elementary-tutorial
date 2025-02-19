@@ -24,8 +24,7 @@ models:
       - name: order_id
         data_tests:
           - not_null:
-              description: The order_id column in the stg_payments table should not
-                contain null values
+              description: new desc - no empty string for description
   - name: stg_signups
     config:
       tags: ["staging", "PII"]
