@@ -1,0 +1,102 @@
+version: 2
+models:
+  - name: pitch
+    columns:
+      - name: game_date
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: game_level
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: is_last_pitch
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: pitch_id
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: pitch_of_game
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: pitch_of_matchup
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: pitch_of_pitcher
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: pitch_type
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: pre_away_score
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: pre_home_score
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: source
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: source_game_id
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: updated_date
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
+      - name: year
+        tests:
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                description: The column should not contain null values
