@@ -37,7 +37,8 @@ sources:
 
 models:
   - name: customers
-    description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
+    description: This table has basic information about a customer, as well as some
+      derived facts based on a customer's orders
     config:
       tags: ["PII"]
 
@@ -70,7 +71,8 @@ models:
         description: Date (UTC) of a customer's signup to the online shop.
 
   - name: orders
-    description: This table has basic information about orders, as well as some derived facts based on payments
+    description: This table has basic information about orders, as well as some derived
+      facts based on payments
     config:
       tags: ["finance"]
 
@@ -123,12 +125,18 @@ models:
       - name: order_id
         description: This is a unique identifier for an order
 
+        data_tests:
+          - not_null: {}
       - name: customer_id
         description: Foreign key to the customers table
 
+        data_tests:
+          - not_null: {}
       - name: order_date
         description: Date (UTC) that the order was placed
 
+        data_tests:
+          - not_null: {}
       - name: status
         description: '{{ doc("orders_status") }}'
 
