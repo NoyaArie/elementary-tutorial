@@ -21,6 +21,8 @@ models:
       - name: payment_id
       - name: payment_method
 
+        data_tests:
+          - not_null: {}
   - name: stg_signups
     config:
       tags: ["staging", "PII"]
