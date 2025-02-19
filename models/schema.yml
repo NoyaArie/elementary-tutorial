@@ -37,7 +37,8 @@ sources:
 
 models:
   - name: customers
-    description: This table has basic information about a customer, as well as some derived facts based on a customer's orders
+    description: This table has basic information about a customer, as well as some
+      derived facts based on a customer's orders
     config:
       tags: ["PII"]
 
@@ -70,7 +71,8 @@ models:
         description: Date (UTC) of a customer's signup to the online shop.
 
   - name: orders
-    description: This table has basic information about orders, as well as some derived facts based on payments
+    description: This table has basic information about orders, as well as some derived
+      facts based on payments
     config:
       tags: ["finance"]
 
@@ -94,7 +96,7 @@ models:
               column_anomalies:
                 - sum
                 - max
-              tags: ["numeric_column_anomalies"]
+              description: test desc desc desc!
 
       - name: credit_card_amount
         description: Amount of the order (AUD) paid for by credit card
@@ -111,9 +113,10 @@ models:
     tests:
       - elementary.schema_changes:
           config:
-            severity: error
-          meta:
-            description: Checks for schema changes against an existing baseline
+            severity: warn
+            tags:
+              - my-tag
+          description: new desc! desc in meta should be removed
   - name: returned_orders
     description: This table contains all of the returned orders
     config:
@@ -138,7 +141,10 @@ models:
           - elementary.column_anomalies:
               column_anomalies:
                 - sum
-              tags: ["numeric_column_anomalies"]
+              config:
+                tags:
+                  - numeric_column_anomalies2
+                severity: warn
           - elementary.column_anomalies:
               column_anomalies:
                 - max
