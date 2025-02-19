@@ -156,6 +156,17 @@ models:
                 - min
               tags: ["numeric_column_anomalies"]
 
+        data_tests:
+          - dbt_utils.not_empty_string:
+              trim_whitespace: true # Optional
+              description: 2nd tests for column
+              config:
+                tags:
+                  - numeric_column_anomalies
+              meta:
+                owner:
+                  - ella+123@elementary-data.com
+                  - nimrod+1@elementary-data.com
       - name: credit_card_amount
         description: Amount of the order (AUD) paid for by credit card
 
