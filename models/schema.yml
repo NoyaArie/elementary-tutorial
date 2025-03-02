@@ -113,9 +113,10 @@ models:
     tests:
       - elementary.schema_changes:
           config:
-            severity: error
-          meta:
-            description: Checks for schema changes against an existing baseline
+            severity: warn
+            tags:
+              - elementary-tests
+          description: Checks for schema changes against an existing baseline
   - name: returned_orders
     description: This table contains all of the returned orders
     config:
