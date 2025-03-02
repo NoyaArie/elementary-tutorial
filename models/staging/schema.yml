@@ -19,6 +19,12 @@ models:
       tags: ["staging", "finance"]
     columns:
       - name: payment_id
+        data_tests:
+          - dbt_utils.at_least_one:
+              group_by_columns: # Optional, Columns to group by before executing the test
+                - group_id
+              config:
+                severity: error
       - name: payment_method
 
       - name: order_id
