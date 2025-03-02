@@ -1,0 +1,12 @@
+version: 2
+models:
+  - name: backfill_days_column_anomalies
+    tests:
+      - dbt_utils.fewer_rows_than:
+          compare_model: ref('other_table_name')
+          group_by_columns: # Optional, Columns to group by before executing the test
+            - group_id
+          config:
+            error_if: '!=3'
+          meta:
+            description: '333'
