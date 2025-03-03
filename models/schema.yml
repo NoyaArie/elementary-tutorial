@@ -126,7 +126,14 @@ models:
         description: This is a unique identifier for an order
 
         data_tests:
-          - not_null
+          - not_null:
+              config:
+                severity: warn
+              meta:
+                owners:
+                  - idan+222@elementary-data.com
+              description: This test validates that there are no `null` values present
+                in a column.
       - name: customer_id
         description: Foreign key to the customers table
 
