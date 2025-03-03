@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -8,7 +7,11 @@ models:
       - name: id
         description: "The primary key for this table"
         tests:
-          - unique
+          - unique:
+              config:
+                severity: warn
+              description: This test validates that there are no duplicate values
+                present in a field.
           - not_null
 
   - name: my_second_dbt_model
