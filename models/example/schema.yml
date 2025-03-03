@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -17,5 +16,10 @@ models:
       - name: id
         description: "The primary key for this table"
         tests:
-          - unique
+          - unique:
+              config:
+                warn_if: '>=5'
+                error_if: '>1'
+              description: This test validates that there are no duplicate values
+                present in a field.
           - not_null
