@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -19,3 +18,16 @@ models:
         tests:
           - unique
           - not_null
+    data_tests:
+      - volume_anomalies:
+          time_bucket:
+            period: day
+            count: 1
+          days_back: 14
+          backfill_days: 2
+          sensitivity: 3.0
+          timestamp_column: col1
+          description: Checking for anomalies in the size and growth of a table by
+            comparing the row count of each 1 days period to the last 14 days
+          config:
+            severity: error
