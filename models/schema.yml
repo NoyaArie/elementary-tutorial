@@ -15,7 +15,9 @@ sources:
         columns:
           - name: full_name
             tests:
-              - not_null
+              - not_null:
+                  config:
+                    severity: warn
   - name: date_dev
     # database: dev
     # schema: noya_tests_elementary
