@@ -26,6 +26,9 @@ models:
           - not_null:
               description: The order_id column in the stg_payments table should not
                 contain null values
+              meta:
+                owners:
+                  - joost@elementary-data.com
   - name: stg_signups
     config:
       tags: ["staging", "PII"]
