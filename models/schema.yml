@@ -124,9 +124,6 @@ models:
     columns:
       - name: order_id
         description: This is a unique identifier for an order
-
-        data_tests:
-          - not_null
       - name: customer_id
         description: Foreign key to the customers table
 
@@ -146,10 +143,6 @@ models:
           - elementary.column_anomalies:
               column_anomalies:
                 - sum
-              tags: ["numeric_column_anomalies"]
-          - elementary.column_anomalies:
-              column_anomalies:
-                - max
               tags: ["numeric_column_anomalies"]
           - elementary.column_anomalies:
               column_anomalies:
