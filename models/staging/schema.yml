@@ -26,6 +26,11 @@ models:
           - not_null:
               description: The order_id column in the stg_payments table should not
                 contain null values
+      - name: amount
+        data_tests:
+          - not_null:
+              description: The amount column in the stg_payments table should not
+                contain null values
   - name: stg_signups
     config:
       tags: ["staging", "PII"]
