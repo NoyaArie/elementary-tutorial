@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -18,4 +17,11 @@ models:
         description: "The primary key for this table"
         tests:
           - unique
-          - not_null
+          - not_null:
+              config:
+                tags:
+                  - '#tagged'
+              meta:
+                owner:
+                  - daniel+2@elementary-data.com
+                  - ella+123@elementary-data.com
