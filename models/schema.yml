@@ -132,6 +132,9 @@ models:
 
         data_tests:
           - not_null
+          - not_null:
+              description: The customer_id column in the returned_orders table should
+                not contain null values
       - name: order_date
         description: Date (UTC) that the order was placed
 
