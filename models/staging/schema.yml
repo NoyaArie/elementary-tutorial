@@ -3,20 +3,47 @@ version: 2
 models:
   - name: stg_customers
     config:
-      tags: ["staging", "PII"]
+      tags:
+        - finance
+        - in-sql-meta-tag
+        - in-sql-tag
+        - PII
+        - sources-group-meta-tag
+        - sources-group-tag
+        - specific-source-meta-tag1
+        - specific-source-tag
+        - staging
     columns:
       - name: customer_id
 
   - name: stg_orders
     config:
-      tags: ["staging", "finance"]
+      tags:
+        - finance
+        - in-sql-meta-tag
+        - in-sql-tag
+        - PII
+        - sources-group-meta-tag
+        - sources-group-tag
+        - specific-source-meta-tag1
+        - specific-source-tag
+        - staging
     columns:
       - name: order_id
       - name: status
 
   - name: stg_payments
     config:
-      tags: ["staging", "finance"]
+      tags:
+        - finance
+        - in-sql-meta-tag
+        - in-sql-tag
+        - PII
+        - sources-group-meta-tag
+        - sources-group-tag
+        - specific-source-meta-tag1
+        - specific-source-tag
+        - staging
     columns:
       - name: payment_id
       - name: payment_method
@@ -28,7 +55,16 @@ models:
                 contain null values
   - name: stg_signups
     config:
-      tags: ["staging", "PII"]
+      tags:
+        - finance
+        - in-sql-meta-tag
+        - in-sql-tag
+        - PII
+        - sources-group-meta-tag
+        - sources-group-tag
+        - specific-source-meta-tag1
+        - specific-source-tag
+        - staging
     columns:
       - name: signup_id
       - name: customer_email
