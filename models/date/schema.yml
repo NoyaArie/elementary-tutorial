@@ -2,4 +2,8 @@ version: 2
 
 models:
   - name: fin_date
+    config:
+      tags:
+        - elementary-tests
+        - finance
   - name: two_dates
