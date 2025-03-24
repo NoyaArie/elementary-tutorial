@@ -146,7 +146,9 @@ models:
           - elementary.column_anomalies:
               column_anomalies:
                 - sum
-              tags: ["numeric_column_anomalies"]
+              config:
+                tags:
+                  - numeric_column_anomalies
           - elementary.column_anomalies:
               column_anomalies:
                 - max
