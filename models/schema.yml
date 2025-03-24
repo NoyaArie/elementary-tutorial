@@ -16,6 +16,9 @@ sources:
           - name: full_name
             tests:
               - not_null
+        config:
+          tags:
+            - tag-for-resource
   - name: date_dev
     # database: dev
     # schema: noya_tests_elementary
