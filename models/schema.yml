@@ -147,6 +147,12 @@ models:
               column_anomalies:
                 - sum
               tags: ["numeric_column_anomalies"]
+              config:
+                warn_if: '!=0'
+                error_if: '>5'
+              meta:
+                owners:
+                  - ella+123@elementary-data.com
           - elementary.column_anomalies:
               column_anomalies:
                 - max
