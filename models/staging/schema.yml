@@ -35,7 +35,10 @@ models:
                   - ui-owner
   - name: stg_signups
     config:
-      tags: ["staging", "PII"]
+      tags:
+        - elementary-tests
+        - PII
+        - staging
     columns:
       - name: signup_id
       - name: customer_email
