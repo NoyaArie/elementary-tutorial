@@ -1,0 +1,975 @@
+version: 2
+models:
+  - name: game
+    columns:
+      - name: game_id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: pitch
+    columns:
+      - name: pitch_id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: player
+    columns:
+      - name: player_id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: positions_by_pitch
+    columns:
+      - name: pitch_id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: video_by_player
+    columns:
+      - name: video_id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: abs_challenge
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: abs_review_reason
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: activity_type
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: addendum_b_type
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: addendum_c
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: addendum_d
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: agency
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: agent
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: amateur_program
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: arbitration
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: automatic_pitch
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: awards
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: awards_names
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: ball_tracking_by_pitch
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: baserunning_times
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: bat_tracking_metrics_statcast
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: batter_sprint_speed
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: batter_stats_by_game
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: blast_swings
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: catcher_arm_accuracy
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: catcher_pickoffs
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: clause_type
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: coach_notes
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: coach_notes_subtype
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: command_charting
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: contract_major
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: contract_major_award_bonus
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: contract_major_bonus_criteria
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: contract_major_compensation_minor
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: contract_major_option
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: contract_major_other_bonus
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: contract_major_performance_bonus
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: contract_major_salary_escalators
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: contract_minor
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: country
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: cvr_values
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: defensive_switches
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: desc_def
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: division
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: efforts_by_pitch
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: ejections
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: fielder_play_made_probability
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: fielder_stats_by_game
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: fielder_stats_by_season
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: fielder_values_by_play
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: fielding_error
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: game_status_code
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: injury_list
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: international_program
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: international_signing_bonus
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: job_type
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: league
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: league_ebis
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: level
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: level_of_play
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: metric
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: metric_by_pitch
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: mi_desc_def
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: mi_enhanced_baserunning
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: non_out_rv_by_pos
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: organization
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: outfield_optimization
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: payroll
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: payroll_by_type
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: pitch_code
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: pitch_type
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: pitcher_disengagements
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: pitcher_pickoffs
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: pitcher_stats_by_game
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: player_draft
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: player_major_service_summary
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: player_status_code
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: player_transaction
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: position
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: positions_by_pitch_all_staff
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: review_reason
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: roster_snapshot
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: roster_status
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: rule5_eligible
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: runner_movement_on_play
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: school
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: school_division
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: session
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: statistics_splits_distribution
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: substitutions
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: synergy_players_missing_from_college_splits
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: team_advance_rosters
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: trackman_portable_hitting
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: trackman_portable_pitching
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: transaction_type
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: transactions
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: transactions_considerations
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: transactions_free_agency_name
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: transactions_il_reason
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: transactions_name
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: transactions_type
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: umpire
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: venue
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: video_angles
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
+  - name: video_metadata
+    columns:
+      - name: _id
+        tests:
+          - unique:
+              config:
+                severity: warn
+              meta:
+                description: The column should contain only unique values
