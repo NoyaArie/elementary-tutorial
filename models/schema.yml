@@ -114,8 +114,14 @@ models:
       - elementary.schema_changes:
           config:
             severity: error
+            tags:
+              - elementary-tests
+              - PII
           meta:
-            description: Checks for schema changes against an existing baseline
+            owners:
+              - noy+2@elementary-data.com
+              - noy+4@elementary-data.com
+          description: Checks for schema changes against an existing baseline111
   - name: returned_orders
     description: This table contains all of the returned orders
     config:
