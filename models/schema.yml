@@ -16,6 +16,10 @@ sources:
           - name: full_name
             tests:
               - not_null
+        config:
+          tags:
+            - tag-for-resource
+        description: description for a source
   - name: date_dev
     # database: dev
     # schema: noya_tests_elementary
@@ -71,8 +75,6 @@ models:
         description: Date (UTC) of a customer's signup to the online shop.
 
   - name: orders
-    description: This table has basic information about orders, as well as some derived
-      facts based on payments
     config:
       tags: ["finance"]
 
@@ -116,10 +118,16 @@ models:
             severity: error
           meta:
             description: Checks for schema changes against an existing baseline
+    meta:
+      owner:
+        - NoaK
+    description: New desc is in the house
   - name: returned_orders
     description: This table contains all of the returned orders
     config:
-      tags: ["finance"]
+      tags:
+        - finance
+        - some-finance-tag
 
     columns:
       - name: order_id
@@ -167,3 +175,6 @@ models:
 
       - name: gift_card_amount
         description: Amount of the order (AUD) paid for by gift card
+    meta:
+      owner:
+        - NoaK
