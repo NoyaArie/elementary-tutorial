@@ -7,6 +7,11 @@ models:
     columns:
       - name: customer_id
 
+    meta:
+      owner:
+        - ella+123@elementary-data.com
+        - o2
+        - sources-group-owner
   - name: stg_orders
     config:
       tags: ["staging", "finance"]

@@ -6,6 +6,11 @@ sources:
     # schema: fin_schema
     tables:
       - name: date
+        meta:
+          owner:
+            - idan+222@elementary-data.com
+            - o2
+            - sources-group-owner
       - name: user_data
         loaded_at_field: created_at
         freshness:
@@ -16,6 +21,10 @@ sources:
           - name: full_name
             tests:
               - not_null
+        meta:
+          owner:
+            - o2
+            - sources-group-owner
   - name: date_dev
     # database: dev
     # schema: noya_tests_elementary
@@ -70,6 +79,11 @@ models:
       - name: signup_date
         description: Date (UTC) of a customer's signup to the online shop.
 
+    meta:
+      owner:
+        - in-sql-owner2
+        - o2
+        - sources-group-owner
   - name: orders
     description: This table has basic information about orders, as well as some derived
       facts based on payments
