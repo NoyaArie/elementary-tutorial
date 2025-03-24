@@ -14,6 +14,21 @@ models:
       - name: order_id
       - name: status
 
+    tests:
+      - elementary.event_freshness_anomalies:
+          time_bucket:
+            period: day
+            count: 2
+          days_back: 21
+          backfill_days: 3
+          sensitivity: 3
+          event_timestamp_column: order_date
+          updated_at_timestamp_column: order_date
+          config:
+            severity: error
+          meta:
+            description: Checking for freshness anomalies by looking at a 2 days period
+              and comparing it to last 21 days
   - name: stg_payments
     config:
       tags: ["staging", "finance"]
