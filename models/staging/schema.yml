@@ -9,7 +9,10 @@ models:
 
   - name: stg_orders
     config:
-      tags: ["staging", "finance"]
+      tags:
+        - finance
+        - in-sql-tag
+        - staging
     columns:
       - name: order_id
       - name: status
@@ -35,7 +38,10 @@ models:
                   - ui-owner
   - name: stg_signups
     config:
-      tags: ["staging", "PII"]
+      tags:
+        - in-sql-tag
+        - PII
+        - staging
     columns:
       - name: signup_id
       - name: customer_email

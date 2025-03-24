@@ -74,7 +74,9 @@ models:
     description: This table has basic information about orders, as well as some derived
       facts based on payments
     config:
-      tags: ["finance"]
+      tags:
+        - in-sql-meta-tag
+        - in-sql-tag
 
     columns:
       - name: order_id
