@@ -16,7 +16,8 @@ models:
 
   - name: stg_payments
     config:
-      tags: ["staging", "finance"]
+      tags:
+        - finance
     columns:
       - name: payment_id
       - name: payment_method
