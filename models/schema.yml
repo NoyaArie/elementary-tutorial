@@ -15,7 +15,15 @@ sources:
         columns:
           - name: full_name
             tests:
-              - not_null
+              - not_null:
+                  config:
+                    tags:
+                      - sources-group-tag
+                      - spacific-source-tag
+                      - new-tag
+                  meta:
+                    owners:
+                      - noy+2@elementary-data.com
   - name: date_dev
     # database: dev
     # schema: noya_tests_elementary
