@@ -16,6 +16,9 @@ sources:
           - name: full_name
             tests:
               - not_null
+        config:
+          tags:
+            - tag-for-resource
   - name: date_dev
     # database: dev
     # schema: noya_tests_elementary
@@ -71,10 +74,10 @@ models:
         description: Date (UTC) of a customer's signup to the online shop.
 
   - name: orders
-    description: This table has basic information about orders, as well as some derived
-      facts based on payments
     config:
-      tags: ["finance"]
+      tags:
+        - finance
+        - finance2
 
     columns:
       - name: order_id
@@ -116,6 +119,9 @@ models:
             severity: error
           meta:
             description: Checks for schema changes against an existing baseline
+    meta:
+      owner:
+        - NoaK
   - name: returned_orders
     description: This table contains all of the returned orders
     config:
