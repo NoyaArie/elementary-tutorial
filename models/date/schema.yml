@@ -3,3 +3,6 @@ version: 2
 models:
   - name: fin_date
   - name: two_dates
+    config:
+      tags:
+        - in-sql-tag
