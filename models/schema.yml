@@ -6,6 +6,16 @@ sources:
     # schema: fin_schema
     tables:
       - name: date
+        config:
+          tags:
+            - finance
+            - in-sql-meta-tag
+            - in-sql-tag
+            - PII
+            - sources-group-meta-tag
+            - sources-group-tag
+            - specific-source-meta-tag1
+            - specific-source-tag
       - name: user_data
         loaded_at_field: created_at
         freshness:
@@ -16,6 +26,16 @@ sources:
           - name: full_name
             tests:
               - not_null
+        config:
+          tags:
+            - finance
+            - in-sql-meta-tag
+            - in-sql-tag
+            - PII
+            - sources-group-meta-tag
+            - sources-group-tag
+            - specific-source-meta-tag1
+            - specific-source-tag
   - name: date_dev
     # database: dev
     # schema: noya_tests_elementary
@@ -35,12 +55,32 @@ sources:
 #    tables:
 #      - name: USER_DATA
 
+        config:
+          tags:
+            - finance
+            - in-sql-meta-tag
+            - in-sql-tag
+            - PII
+            - sources-group-meta-tag
+            - sources-group-tag
+            - specific-source-meta-tag1
+            - specific-source-tag
+            - specific-source-tag1
 models:
   - name: customers
     description: This table has basic information about a customer, as well as some
       derived facts based on a customer's orders
     config:
-      tags: ["PII"]
+      tags:
+        - finance
+        - in-sql-meta-tag
+        - in-sql-tag
+        - PII
+        - sources-group-meta-tag
+        - sources-group-tag
+        - specific-source-meta-tag1
+        - specific-source-tag
+        - yml-config-tag
 
     columns:
       - name: customer_id
@@ -74,7 +114,15 @@ models:
     description: This table has basic information about orders, as well as some derived
       facts based on payments
     config:
-      tags: ["finance"]
+      tags:
+        - finance
+        - in-sql-meta-tag
+        - in-sql-tag
+        - PII
+        - sources-group-meta-tag
+        - sources-group-tag
+        - specific-source-meta-tag1
+        - specific-source-tag
 
     columns:
       - name: order_id
@@ -119,7 +167,15 @@ models:
   - name: returned_orders
     description: This table contains all of the returned orders
     config:
-      tags: ["finance"]
+      tags:
+        - finance
+        - in-sql-meta-tag
+        - in-sql-tag
+        - PII
+        - sources-group-meta-tag
+        - sources-group-tag
+        - specific-source-meta-tag1
+        - specific-source-tag
 
     columns:
       - name: order_id

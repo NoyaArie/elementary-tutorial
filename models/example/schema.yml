@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -11,6 +10,16 @@ models:
           - unique
           - not_null
 
+    config:
+      tags:
+        - finance
+        - in-sql-meta-tag
+        - in-sql-tag
+        - PII
+        - sources-group-meta-tag
+        - sources-group-tag
+        - specific-source-meta-tag1
+        - specific-source-tag
   - name: my_second_dbt_model
     description: "A starter dbt model"
     columns:
@@ -19,3 +28,13 @@ models:
         tests:
           - unique
           - not_null
+    config:
+      tags:
+        - finance
+        - in-sql-meta-tag
+        - in-sql-tag
+        - PII
+        - sources-group-meta-tag
+        - sources-group-tag
+        - specific-source-meta-tag1
+        - specific-source-tag

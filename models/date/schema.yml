@@ -2,4 +2,24 @@ version: 2
 
 models:
   - name: fin_date
+    config:
+      tags:
+        - finance
+        - in-sql-meta-tag
+        - in-sql-tag
+        - PII
+        - sources-group-meta-tag
+        - sources-group-tag
+        - specific-source-meta-tag1
+        - specific-source-tag
   - name: two_dates
+    config:
+      tags:
+        - finance
+        - in-sql-meta-tag
+        - in-sql-tag
+        - PII
+        - sources-group-meta-tag
+        - sources-group-tag
+        - specific-source-meta-tag1
+        - specific-source-tag
