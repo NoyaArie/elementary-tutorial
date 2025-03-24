@@ -46,6 +46,12 @@ models:
       - name: customer_id
         description: This is a unique identifier for a customer
 
+        tests:
+          - not_null:
+              config:
+                severity: error
+              meta:
+                description: The CUSTOMER_ID column in the customers table should not contain null values
       - name: first_name
         description: Customer's first name. PII.
 
