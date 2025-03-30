@@ -117,7 +117,6 @@ models:
           meta:
             description: Checks for schema changes against an existing baseline
   - name: returned_orders
-    description: This table contains all of the returned orders
     config:
       tags: ["finance"]
 
@@ -167,3 +166,4 @@ models:
 
       - name: gift_card_amount
         description: Amount of the order (AUD) paid for by gift card
+    description: This table contains all of the returned orders 222
