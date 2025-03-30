@@ -71,8 +71,6 @@ models:
         description: Date (UTC) of a customer's signup to the online shop.
 
   - name: orders
-    description: This table has basic information about orders, as well as some derived
-      facts based on payments
     config:
       tags: ["finance"]
 
@@ -116,6 +114,8 @@ models:
             severity: error
           meta:
             description: Checks for schema changes against an existing baseline
+    description: "This table has basic information about orders, as well as some derived
+      facts based on payments\nds\n\ndsf\n\ndsf"
   - name: returned_orders
     description: This table contains all of the returned orders
     config:
