@@ -33,6 +33,7 @@ models:
               meta:
                 owner:
                   - ui-owner
+    description: this is a test description
   - name: stg_signups
     config:
       tags: ["staging", "PII"]
