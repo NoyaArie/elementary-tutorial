@@ -14,6 +14,7 @@ models:
       - name: order_id
       - name: status
 
+    description: try
   - name: stg_payments
     config:
       tags: ["staging", "finance"]
