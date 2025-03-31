@@ -3,3 +3,9 @@ version: 2
 models:
   - name: fin_date
   - name: two_dates
+    description: This model compares the record counts between two date tables from
+      different schemas (date_dev and date). It provides a simple count analysis by
+      returning the total number of records from each table as separate rows. This
+      comparison helps data teams monitor data consistency between development and
+      production environments, allowing them to identify potential discrepancies in
+      record volumes across environments.
