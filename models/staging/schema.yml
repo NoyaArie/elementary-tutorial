@@ -39,3 +39,10 @@ models:
     columns:
       - name: signup_id
       - name: customer_email
+    description: A staging model that standardizes and renames user signup data from
+      the source system. This model contains customer signup information including
+      customer IDs, email addresses, hashed passwords, and signup dates. It serves
+      as a cleaned foundation for downstream customer acquisition and authentication
+      analysis, transforming raw signup data into consistently named fields with appropriate
+      data types. Contains PII data that should be handled according to data governance
+      policies.
