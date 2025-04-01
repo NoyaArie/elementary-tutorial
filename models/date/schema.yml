@@ -3,3 +3,8 @@ version: 2
 models:
   - name: fin_date
   - name: two_dates
+    description: This model counts and combines the number of records from two date
+      tables - one from the development environment (date_dev.date) and one from the
+      production environment (date.date). It provides a simple comparison of record
+      counts between environments, which can be useful for validating data consistency
+      across environments or tracking growth differences.
