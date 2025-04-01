@@ -1,9 +1,7 @@
-
 version: 2
 
 models:
   - name: my_first_dbt_model
-    description: "A starter dbt model"
     columns:
       - name: id
         description: "The primary key for this table"
@@ -11,6 +9,11 @@ models:
           - unique
           - not_null
 
+    description: A starter demonstration model that creates a simple dataset with
+      ID values. This model serves as an example for new dbt users to understand basic
+      model structure and SQL transformations. It contains a single column of ID values,
+      including both numeric and null values, to illustrate how data can be selected
+      and filtered in dbt models.
   - name: my_second_dbt_model
     description: "A starter dbt model"
     columns:

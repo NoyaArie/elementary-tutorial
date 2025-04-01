@@ -14,6 +14,13 @@ models:
       - name: order_id
       - name: status
 
+    description: A standardized staging model that transforms raw order data from
+      the training dataset into a clean, consistent format for financial analysis.
+      This model renames key fields (converting 'id' to 'order_id' and 'user_id' to
+      'customer_id') while preserving essential order information such as order date
+      and status. It serves as a foundation for downstream financial reporting and
+      order analysis by providing normalized order data with consistent field naming
+      conventions.
   - name: stg_payments
     config:
       tags: ["staging", "finance"]
