@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -12,10 +11,13 @@ models:
           - not_null
 
   - name: my_second_dbt_model
-    description: "A starter dbt model"
     columns:
       - name: id
         description: "The primary key for this table"
         tests:
           - unique
           - not_null
+    description: A filtered subset of data from my_first_dbt_model, containing only
+      records where the id equals 1. This model serves as a simple example of how
+      to reference another model using dbt's ref function. It demonstrates basic data
+      filtering without performing any complex transformations or calculations.
