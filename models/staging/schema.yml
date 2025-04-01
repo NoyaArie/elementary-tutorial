@@ -33,6 +33,12 @@ models:
               meta:
                 owner:
                   - ui-owner
+    description: "# Model Description: stg_payments\n\nA staging model that standardizes
+      payment data from the source system. This model represents individual payment
+      transactions with their associated order information and payment methods. It
+      performs a key transformation by converting payment amounts from cents to dollars,
+      making the data more intuitive for financial analysis and reporting. This model
+      serves as a foundation for downstream financial models and analytics."
   - name: stg_signups
     config:
       tags: ["staging", "PII"]
