@@ -1,0 +1,11 @@
+version: 2
+models:
+  - name: dimension_anomalies
+    columns:
+      - name: platform
+        tests:
+          - dbt_utils.cardinality_equality:
+              field: other_column_name
+              to: ref('other_model_name')
+              config:
+                severity: error
