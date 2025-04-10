@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: groups
+    columns:
+      - name: group_c
+        tests:
+          - dbt_utils.at_least_one:
+              group_by_columns: # Optional, Columns to group by before executing the test
+                - group_id
+              config:
+                severity: error
+              meta:
+                owner:
+                  - test-level
