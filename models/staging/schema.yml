@@ -12,6 +12,10 @@ models:
       tags: ["staging", "finance"]
     columns:
       - name: order_id
+        data_tests:
+          - not_null:
+              description: The order_id column in the stg_orders table should not
+                contain null values
       - name: status
 
   - name: stg_payments
