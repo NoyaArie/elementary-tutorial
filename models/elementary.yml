@@ -1,0 +1,7 @@
+version: 2
+models:
+  - name: nested
+    tests:
+      - dbt_expectations.expect_table_aggregation_to_equal_other_table:
+          config:
+            severity: error
