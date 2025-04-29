@@ -116,6 +116,20 @@ models:
             severity: error
           meta:
             description: Checks for schema changes against an existing baseline
+      - elementary.dimension_anomalies:
+          time_bucket:
+            period: day
+            count: 1
+          days_back: 14
+          backfill_days: 2
+          sensitivity: 3.0
+          timestamp_column: order_date
+          dimensions:
+            - status
+          description: Checking for anomalies in the values distribution of the order_date
+            column by looking at a 1 days period and comparing it to the last 14 days
+          config:
+            severity: error
   - name: returned_orders
     description: This table contains all of the returned orders
     config:
