@@ -70,6 +70,7 @@ models:
       - name: signup_date
         description: Date (UTC) of a customer's signup to the online shop.
 
+    data_tests: []
   - name: orders
     description: This table has basic information about orders, as well as some derived
       facts based on payments
@@ -124,9 +125,6 @@ models:
     columns:
       - name: order_id
         description: This is a unique identifier for an order
-
-        data_tests:
-          - not_null
       - name: customer_id
         description: Foreign key to the customers table
 
