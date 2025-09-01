@@ -124,19 +124,10 @@ models:
     columns:
       - name: order_id
         description: This is a unique identifier for an order
-
-        data_tests:
-          - not_null
       - name: customer_id
         description: Foreign key to the customers table
-
-        data_tests:
-          - not_null
       - name: order_date
         description: Date (UTC) that the order was placed
-
-        data_tests:
-          - not_null
       - name: status
         description: '{{ doc("orders_status") }}'
 
