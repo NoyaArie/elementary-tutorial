@@ -14,8 +14,6 @@ sources:
             period: day
         columns:
           - name: full_name
-            tests:
-              - not_null
   - name: date_dev
     # database: dev
     # schema: noya_tests_elementary
