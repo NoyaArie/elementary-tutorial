@@ -1,0 +1,15 @@
+version: 2
+exposures:
+  - name: 265e4a099375454fbae237398c8eb368__tutorial_highlights
+    type: analysis
+    url: 
+      https://app.powerbi.com/groups/a4d89f4b-f4d8-4982-a8ec-1e42b60a7361/dashboards/265e4a09-9375-454f-bae2-37398c8eb368
+    meta:
+      platform: PowerBI
+      bi_destination_id: 4ff59ddb-91a2-454a-9690-9ca7fca88068
+      bi_destination_name: Power Nimrod
+      sub_type: dashboard
+      path: Power Nimrod/Snowflake
+    label: Tutorial Highlights
+    owner:
+      name: Noy Arie account
