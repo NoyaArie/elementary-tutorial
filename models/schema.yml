@@ -167,3 +167,12 @@ models:
 
       - name: gift_card_amount
         description: Amount of the order (AUD) paid for by gift card
+
+  - name: one
+    columns:
+      - name: one
+        tests:
+          - accepted_values:
+              values: [2, 3]
+              error_if: "> 100"
+              warn_if: "> 2"
