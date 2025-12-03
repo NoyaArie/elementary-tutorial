@@ -1,0 +1,10 @@
+models:
+  - name: any_type_column_anomalies_training
+    columns:
+      - name: null_count_int
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: col_a + col_b = total
+              description: fff123
+              config:
+                severity: error
