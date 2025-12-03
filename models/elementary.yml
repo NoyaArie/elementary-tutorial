@@ -1,0 +1,9 @@
+models:
+  - name: any_type_column_anomalies_training
+    columns:
+      - name: null_count_int
+        data_tests:
+          - dbt_expectations.expect_column_values_to_be_unique:
+              row_condition: id is not null # Optional
+              config:
+                severity: error
