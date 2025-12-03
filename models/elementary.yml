@@ -1,0 +1,9 @@
+models:
+  - name: any_type_column_anomalies_training
+    columns:
+      - name: null_percent_str
+        data_tests:
+          - dbt_utils.expression_is_true:
+              expression: col_a + col_b = total
+              config:
+                severity: error
