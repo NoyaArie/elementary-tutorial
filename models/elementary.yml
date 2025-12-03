@@ -1,0 +1,11 @@
+models:
+  - name: any_type_column_anomalies_training
+    columns:
+      - name: null_count_bool
+        data_tests:
+          - dbt_utils.not_constant:
+              group_by_columns:
+                - group_id
+              name: fff123
+              config:
+                severity: error
