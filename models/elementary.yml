@@ -1,0 +1,9 @@
+models:
+  - name: any_type_column_anomalies_training
+    columns:
+      - name: null_count_float
+        data_tests:
+          - unique:
+              description: The null_count_float column in the any_type_column_anomalies_training
+                table should contain only unique values
+              name: ellarlla567
