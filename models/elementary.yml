@@ -1,0 +1,12 @@
+models:
+  - name: any_type_column_anomalies_training
+    columns:
+      - name: null_count_int
+        data_tests:
+          - dbt_utils.at_least_one:
+              group_by_columns: # Optional, Columns to group by before executing the test
+                - group_id
+              description: ggg
+              name: namename111
+              config:
+                severity: error
