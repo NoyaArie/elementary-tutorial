@@ -2,4 +2,14 @@ version: 2
 
 models:
   - name: fin_date
+    data_tests:
+      - dbt_expectations.expect_table_row_count_to_equal:
+          arguments:
+            value: 4
+            group_by: # Optional
+              - group_id
+              - other_group_id
+            row_condition: id is not null
+          config:
+            severity: error
   - name: two_dates
